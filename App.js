@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -19,6 +21,13 @@ export default function App() {
         }}/> 
       <Text style={{ fontSize:20 }}>Everest Paudel</Text>
       <Text>React Native</Text>
+
+      <View style={{ flexDirection:"row" ,marginVertical :10,gap:10}}>
+      <FontAwesome6 name="github" size={24} color="balck" />
+      <FontAwesome6 name="x-twitter" size={24} color="black" />
+      <FontAwesome6 name="at" size={24} color="black" />
+      </View>
+      
       <StatusBar style="auto" />
     </View>
   );
