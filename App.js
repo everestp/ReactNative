@@ -14,6 +14,7 @@ import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { SafeAreaProvider ,SafeAreaView, useSafeAreaInsets} from "react-native-safe-area-context";
 function DisplayInsets(){
   const insets = useSafeAreaInsets()
+
   return(
     <Text>
       // this cookies use for animation an determine the area of notch
@@ -22,6 +23,25 @@ function DisplayInsets(){
   )
 }
 export default function App() {
+  
+  const getOccupation = ()=>{
+    return "React Native";
+  }
+
+const renderIcons =()=>{
+  return (
+    <View style={{ flexDirection:"row" ,marginVertical :10,gap:10}}>
+    <FontAwesome6 name="github" size={24} color="balck" />
+    <FontAwesome6 name="x-twitter" size={24} color="black" />
+    <FontAwesome6 name="at" size={24} color="black" />
+    </View>
+  )
+}
+
+
+
+
+
   const onContactMe = () => {
     Linking.openURL("https://github.com/everestp");
     console.log("Contact me");
@@ -66,13 +86,9 @@ export default function App() {
     marginTop:-75
     }}/>
   <Text style={{ fontSize:20 }}>Everest Paudel</Text>
-  <Text>React Native</Text>
+  <Text>{getOccupation()}</Text>
 
-  <View style={{ flexDirection:"row" ,marginVertical :10,gap:10}}>
-  <FontAwesome6 name="github" size={24} color="balck" />
-  <FontAwesome6 name="x-twitter" size={24} color="black" />
-  <FontAwesome6 name="at" size={24} color="black" />
-  </View>
+{renderIcons()}
   <Button title='Contact me' onPress={()=> onContactMe()}/>
   <Text>
     lorem ipsum dolor sit amet, consectetur adipiscing elit.
