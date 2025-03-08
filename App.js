@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import {
+  ActivityIndicator,
   Button,
   Image,
   Linking,
@@ -23,6 +24,13 @@ function DisplayInsets(){
   )
 }
 export default function App() {
+
+  const  name = 'Everest Paudel'
+  const links = {
+    github :'everestp',
+    email :'rest@offnine.com',
+    x:'everest_paudel'
+  }
   
   const getOccupation = ()=>{
     return "React Native";
@@ -31,9 +39,9 @@ export default function App() {
 const renderIcons =()=>{
   return (
     <View style={{ flexDirection:"row" ,marginVertical :10,gap:10}}>
-    <FontAwesome6 name="github" size={24} color="balck" />
-    <FontAwesome6 name="x-twitter" size={24} color="black" />
-    <FontAwesome6 name="at" size={24} color="black" />
+   { links.github && <FontAwesome6 name="github" size={24} color="balck" />}
+    {links.x && <FontAwesome6 name="x-twitter" size={24} color="black" />}
+   {links.email && <FontAwesome6 name="at" size={24} color="black" />}
     </View>
   )
 }
@@ -46,6 +54,49 @@ const renderIcons =()=>{
     Linking.openURL("https://github.com/everestp");
     console.log("Contact me");
   };
+
+  const isLoading = true;
+
+  const isError = false
+
+  const color = isError===true? 'red':'green'
+  const like =0
+
+//Consitiona Rendering
+// return (
+//   <View style={{flex:1,alignItems :"center",justifyContent :"center"}}>
+
+
+//     {/* Not work like that even the {} this open portal of javscript  because this is not the erxpression it is the conditiona Statement 
+//     expression shoul evalute one single value */}
+
+//     {/* {
+//       if(isLoading){
+//         return <ActivityIndicator/>
+//       }
+//       else{
+//         <Text>Hello world </Text>
+//       }
+//     } */}
+
+// {/* correct Method */}
+
+
+
+
+// {isLoading? <ActivityIndicator/> :  <Text style={{color:color}}>Hello world </Text>}
+// {isLoading && !isError && <ActivityIndicator/>}
+//   {!!like && <Text> Post has {like || 'no'} likes</Text>}
+//   {<Text> Post has {like || 'no'} likes</Text>}
+//   </View>
+// )
+
+
+
+
+
+
+
   // return (
 
   // <SafeAreaProvider>
@@ -66,6 +117,14 @@ const renderIcons =()=>{
   
     
   // );
+
+
+
+
+
+
+
+
   return (
     <SafeAreaProvider>
       <SafeAreaView edges={['bottom']}>
