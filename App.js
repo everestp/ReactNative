@@ -10,6 +10,7 @@ import {
   Text,
   View,
 } from "react-native";
+import ProjectCard from "./ProjectCard";
 
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { SafeAreaProvider ,SafeAreaView, useSafeAreaInsets} from "react-native-safe-area-context";
@@ -18,7 +19,7 @@ function DisplayInsets(){
 
   return(
     <Text>
-      // this cookies use for animation an determine the area of notch
+      {/* // this cookies use for animation an determine the area of notch */}
       Insets : {insets.bottom} -{insets.top}
     </Text>
   )
@@ -119,7 +120,7 @@ const renderIcons =()=>{
   // );
 
 
-
+// custom Component
 
 
 
@@ -154,35 +155,17 @@ const renderIcons =()=>{
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
   </Text>
+  <Text style={{fontWeight :'bold', fontSize :18 , marginTop :20}}>Project</Text>
+ //add custom component to render
+ <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{gap:10 ,padding :10}}>
+ <ProjectCard name ="Apple Card" image={require("./assets/download.jpeg")}/>
+ <ProjectCard name ="Trello"  image={require("./assets/download (1).jpeg")} />
+ <ProjectCard name ="Rest"  image={require("./assets/icon.png")}/>
+ <ProjectCard name ="LMS"  image={require("./assets/favicon.png")}/>
+ </ScrollView>
+ 
 
   <StatusBar style="auto" />
 </View>
