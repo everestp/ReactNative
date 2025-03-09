@@ -137,14 +137,7 @@ const renderIcons =()=>{
    height:"200",
 
   }}/>
-  <Image source={require("./assets/download.jpeg")}  style={{
-    width:150,
-    height:150,
-    borderRadius:150,
-    borderColor : "black",
-    borderWidth:5,
-    marginTop:-75
-    }}/>
+  <Image source={require("./assets/download.jpeg")}  style={styles.images}/>
   <Text style={{ fontSize:20 }}>Everest Paudel</Text>
   <Text>{getOccupation()}</Text>
 
@@ -184,4 +177,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+
+  images:{
+    width:150,
+    height:150,
+    borderRadius:150,
+    borderColor : "black",
+    borderWidth:5,
+    marginTop:-75
+  }
 });
